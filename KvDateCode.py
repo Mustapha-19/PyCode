@@ -2,8 +2,6 @@ import kivy
 from kivy.config import Config
 Config.set('graphics', 'resizable', False)
 
-
-
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
@@ -12,8 +10,6 @@ from datetime import datetime
 from kivy.uix.dropdown import DropDown
 from kivy.uix.button import Button
 from kivy.properties import NumericProperty
-
-
 
 class DateSelector(Button):
     value = NumericProperty(1)
@@ -47,12 +43,10 @@ class DateSelector(Button):
         self.text = f"{self.label_text}: {self.value}"
         self.update_callback()
 
-
     def update_range(self, min_value, max_value):
         self.min_value = min_value
         self.max_value = max_value
         self.update_dropdown()
-
 
 class DateCodeApp(App):
     def build(self):
