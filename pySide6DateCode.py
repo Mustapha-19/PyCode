@@ -57,7 +57,6 @@ class DateSelector(QWidget):
             }
         """)
 
-##        self.combo.setStyleSheet(f"color: #55557f ;background-color: #ced1ff;")
         self.combo.addItems([str(i) for i in range(self.min_value, self.max_value + 1)])
         self.combo.setCurrentText(str(initial_value))
         self.combo.currentTextChanged.connect(self.on_select)
